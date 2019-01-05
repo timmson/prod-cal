@@ -1,5 +1,3 @@
-module.exports = Calendar;
-
 let cal = undefined;
 
 function Calendar(locale) {
@@ -27,3 +25,5 @@ Calendar.prototype.getYear = function (year) {
 Calendar.prototype.DAY_WORK = "work";
 Calendar.prototype.DAY_WORK_REDUCED = "work_reduced";
 Calendar.prototype.DAY_HOLIDAY = "holiday";
+
+module.exports = Calendar;
