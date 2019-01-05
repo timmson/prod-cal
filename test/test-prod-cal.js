@@ -2,11 +2,11 @@ const assert = require("assert");
 const Calendar = require("../index.js");
 
 function countWorkDays(m) {
-    return m.filter(isWork).length
+    return m.filter(isWork).length;
 }
 
 function isWork(d) {
-    return d.indexOf("work") >= 0
+    return d.indexOf("work") >= 0;
 }
 
 describe("ProdCal", () => {
