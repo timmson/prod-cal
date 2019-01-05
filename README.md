@@ -2,7 +2,7 @@
 
 [![status](https://travis-ci.org/timmson/prod-cal.svg?branch=master)](https://travis-ci.org/angular/angular)
 [![codecov](https://codecov.io/gh/timmson/prod-cal/branch/master/graph/badge.svg)](https://codecov.io/gh/timmson/prod-cal)
-[![codacy](https://api.codacy.com/project/badge/Grade/a67746d04fb245e58817f2e3959d9501)](https://www.codacy.com/app/timmson666/prod-cal)
+[![codacy](https://api.codacy.com/project/badge/Grade/c513099cc1ec4e849c123705ab04b369)](https://www.codacy.com/app/timmson666/prod-cal)
 [![version](https://img.shields.io/npm/v/prod-cal.svg)](https://www.npmjs.com/package/prod-cal)
 [![license](https://img.shields.io/npm/l/prod-cal.svg)](https://www.npmjs.com/package/prod-cal)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftimmson%2Fprod-cal.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftimmson%2Fprod-cal?ref=badge_shield)
