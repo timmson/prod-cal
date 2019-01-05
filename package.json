@@ -1,0 +1,23 @@
+{
+  "name": "prod-cal",
+  "version": "1.0.0",
+  "description": "Production Calendar",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timmson/prod-cal.git"
+  },
+  "keywords": [
+    "production",
+    "calendar"
+  ],
+  "author": "Krotov Artem",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/timmson/prod-cal/issues"
+  },
+  "homepage": "https://github.com/timmson/prod-cal#readme"
+}
