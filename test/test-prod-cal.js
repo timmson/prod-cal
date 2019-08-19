@@ -33,8 +33,8 @@ describe("ProdCal", () => {
     });
 
     describe("#getYear", ()=> {
-        it("2020 year should have 250 working days", () => {
-            assert.equal(calendar.getYear(2020).map(countWorkDays).reduce((a, c) => a + c, 0), 250);
+        it("2020 year should have 248 working days", () => {
+            assert.equal(calendar.getYear(2020).map(countWorkDays).reduce((a, c) => a + c, 0), 248);
         });
     });
 });

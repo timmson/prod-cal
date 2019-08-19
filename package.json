@@ -1,10 +1,10 @@
 {
   "name": "prod-cal",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Production Calendar",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "npx mocha",
     "coverage": "nyc mocha && nyc report --reporter=text-lcov > coverage.lcov"
   },
   "repository": {
