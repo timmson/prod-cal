@@ -15,7 +15,6 @@ let app = new Vue({
     methods: {},
     mounted() {
         [this.currentYear, this.currentYear + 1].forEach(y => this.$set(this.years, y, this.calendar.getYear(y)));
-        //this.$forceUpdate();
     },
     beforeUpdate() {
 

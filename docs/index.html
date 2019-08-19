@@ -18,8 +18,8 @@
         </div>
         <div class="row ml-2">
             <div class="col-2 float-right mt-4 mr-2" v-for="(monthData, month) in year">
-                <div class="row">
-                    <div :class="'col-2 border border-dark ' + dayType" v-for="(dayType, day) in monthData ">
+                <div class="row seven-cols">
+                    <div :class="'col-1 border border-dark ' + dayType" v-for="(dayType, day) in monthData ">
                         {{ (day + 1) }}
                     </div>
                 </div>
