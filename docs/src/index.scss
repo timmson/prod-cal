@@ -1,42 +1,41 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-.work {
-  color: black;
+
+span.clickable {
+  cursor: pointer;
 }
 
-.holiday {
-  color: red;
-}
+.calendar {
 
-.work_reduced {
-  color: rosybrown;
-}
-
-.holiday {
-  color: red;
-}
-
-@media (min-width: 768px){
-  .seven-cols .col-1  {
-    width: 100%;
-    *width: 100%;
+  tr.dayOfWeek td {
+    background-color: #ccc;
   }
-}
 
-@media (min-width: 992px) {
-  .seven-cols .col-1 {
-    width: 14.285714285714285714285714285714%;
-    *width: 14.285714285714285714285714285714%;
+  td {
+    width: 14.28571428571429%;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: #eee;
   }
-}
 
-/**
- *  The following is not really needed in this case
- *  Only to demonstrate the usage of @media for large screens
- */
-@media (min-width: 1200px) {
-  .seven-cols .col-1 {
-    width: 14.285714285714285714285714285714%;
-    *width: 14.285714285714285714285714285714%;
+  td.month {
+    background-color: #aaa;
+  }
+
+  td.work {
+    color: black;
+  }
+
+  td.holiday {
+    font-weight: bold;
+    color: red;
+  }
+
+  td.work_reduced {
+    color: brown;
+  }
+
+  td.inactive {
+    color: darkgray;
   }
 }

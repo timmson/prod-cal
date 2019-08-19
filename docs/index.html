@@ -7,31 +7,43 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <h3 style="color:#fd680e;">Production Calendar</h3>
-    </nav>
-    <template v-for="(year, yearNum) in years">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <h3 style="color:#fd680e;">Production Calendar</h3>
+        </nav>
         <div class="row ml-2">
-            <div class="col mt-4">
-                <h3>{{ yearNum }}</h3>
+            <div class="col mt-4 text-center">
+                <h3><span class="clickable" @click="selectedYear--; buildCalendar();">◀</span> {{ selectedYear }} <span class="clickable" @click="selectedYear++; buildCalendar();">▶</span></h3>
             </div>
         </div>
         <div class="row ml-2">
-            <div class="col-2 float-right mt-4 mr-2" v-for="(monthData, month) in year">
-                <div class="row seven-cols">
-                    <div :class="'col-1 border border-dark ' + dayType" v-for="(dayType, day) in monthData ">
-                        {{ (day + 1) }}
-                    </div>
-                </div>
+            <div class="col float-right mt-4 mr-2" v-for="(month) in year">
+                <table class="calendar">
+                    <tr>
+                        <td class="month" colspan="7">{{ month.name }}</td>
+                    </tr>
+                    <tr class="dayOfWeek">
+                        <td class="work">mon</td>
+                        <td class="work">tue</td>
+                        <td class="work">wed</td>
+                        <td class="work">thu</td>
+                        <td class="work">fri</td>
+                        <td class="holiday">sat</td>
+                        <td class="holiday">sun</td>
+                    </tr>
+                    <tr v-for="(week, i) in month.weeks">
+                        <td :class="day.type" v-for="(day) in week">{{ day.date}}</td>
+                    </tr>
+                </table>
             </div>
         </div>
-    </template>
-    <div class="row mt-5">
-        <div class="col-sm-7">&nbsp;</div>
-        <div class="col-sm-4">
-            <p class="copyright">Copyright &copy; <span>{{ currentYear }}</span> - Designed by timmson</p>
+        <div class="row mt-5">
+            <div class="col-sm-7">&nbsp;</div>
+            <div class="col-sm-4">
+                <p class="copyright">Copyright &copy; <span>{{ currentYear }}</span> - Designed by timmson</p>
+            </div>
+            <div class="col-sm-1">&nbsp;</div>
         </div>
-        <div class="col-sm-1">&nbsp;</div>
     </div>
 </div>
 <script src="index.js" type="application/javascript"></script>
