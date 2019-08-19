@@ -1,0 +1,43 @@
+{
+  "name": "prod-cal-webview",
+  "version": "1.0.3",
+  "description": "Production Calendar Webview",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "3.4.1",
+    "popper.js": "^1.15.0",
+    "vue": "2.6.10",
+    "vue-fullscreen": "2.1.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "9.6.1",
+    "css-loader": "3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "4.12.0",
+    "postcss-loader": "3.0.0",
+    "precss": "4.0.0",
+    "sass-loader": "7.2.0",
+    "webpack": "4.35.3",
+    "webpack-cli": "^3.3.6"
+  },
+  "scripts": {
+    "watch": "npx webpack --mode development --watch",
+    "dev": "npx webpack --mode development",
+    "prod": "npx webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timmson/prod-cal.git"
+  },
+  "keywords": [
+    "kanban",
+    "getkanban"
+  ],
+  "author": "timmson",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/timmson/prod-cal/issues"
+  },
+  "homepage": "https://github.com/timmson/prod-cal#readme"
+}

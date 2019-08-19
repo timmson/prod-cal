@@ -1,17 +1,21 @@
 # Idea
 .idea/
 
-#Node modules
+# Node modules
 node_modules/
+docs/node_modules/
 
-#Test & Coverage
+# Test & Coverage
 .nyc_output
 coverage.lcov
 test
 
-#Git
+# Git
 .git
 .gitignore
 
-#Other
+# Other
 .travis.yml
+
+# Webview
+docs/
