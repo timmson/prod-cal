@@ -7,6 +7,7 @@
 [![license](https://img.shields.io/npm/l/prod-cal.svg)](https://www.npmjs.com/package/prod-cal)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ftimmson%2Fprod-cal.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ftimmson%2Fprod-cal?ref=badge_shield)
 
+[..::Live demo::..](https://timmson.github.io/prod-cal/)
 
 ## Installation
 ```bash
