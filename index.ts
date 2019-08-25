@@ -2,9 +2,9 @@ import * as cal from "./calendars/ru.js"
 
 class Calendar {
 
-    public static DAY_WORK = "work";
-    public static DAY_HOLIDAY = "holiday";
-    public static DAY_WORK_REDUCED = "work_reduced";
+    public static DAY_WORK: string = "work";
+    public static DAY_HOLIDAY: string = "holiday";
+    public static DAY_WORK_REDUCED: string = "work_reduced";
 
     constructor(locale?: string) {
         if (locale && locale !== "ru") {
