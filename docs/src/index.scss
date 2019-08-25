@@ -1,5 +1,10 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+@media handheld {
+  body {
+    font-size: 1vw;
+  }
+}
 
 span.clickable {
   cursor: pointer;

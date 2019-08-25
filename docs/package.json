@@ -8,8 +8,7 @@
     "jquery": "3.4.1",
     "moment": "2.24.0",
     "popper.js": "^1.15.0",
-    "vue": "2.6.10",
-    "vue-fullscreen": "2.1.5"
+    "vue": "2.6.10"
   },
   "devDependencies": {
     "autoprefixer": "9.6.1",
@@ -36,7 +35,7 @@
     "calendar"
   ],
   "author": "timmson",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/timmson/prod-cal/issues"
   },
