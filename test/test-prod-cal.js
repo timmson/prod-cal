@@ -1,4 +1,4 @@
-const Calendar = require("../index.js").default;
+const Calendar = require("../index.js");
 const {expect} = require("chai");
 require("mocha");
 

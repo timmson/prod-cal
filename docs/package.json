@@ -1,6 +1,6 @@
 {
   "name": "prod-cal-webview",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Production Calendar Webview",
   "private": true,
   "dependencies": {
@@ -32,8 +32,8 @@
     "url": "git+https://github.com/timmson/prod-cal.git"
   },
   "keywords": [
-    "kanban",
-    "getkanban"
+    "production",
+    "calendar"
   ],
   "author": "timmson",
   "license": "GPL-3.0",

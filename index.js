@@ -29,4 +29,4 @@ class Calendar {
 Calendar.DAY_WORK = "work";
 Calendar.DAY_HOLIDAY = "holiday";
 Calendar.DAY_WORK_REDUCED = "work_reduced";
-exports.default = Calendar;
+module.exports = Calendar;

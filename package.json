@@ -1,6 +1,6 @@
 {
   "name": "prod-cal",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Production Calendar",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@types/chai": "4.2.0",
     "@types/mocha": "5.2.7",
+    "@types/node": "12.7.2",
     "chai": "4.2.0",
     "eslint": "6.2.2",
     "mocha": "6.2.0",
