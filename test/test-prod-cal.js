@@ -12,7 +12,8 @@ function isWork(d) {
 describe("Calendar", () => {
     let calendar = new Calendar("ru");
 
-    describe("gets day as", () => {
+    describe("gets year as", () => {
+
         it("29-01-2019 and it should return work day", () => {
             let dayType = calendar.getCalendar(2019, 1, 28);
             expect(dayType).to.equal(Calendar.DAY_WORK);
@@ -41,5 +42,25 @@ describe("Calendar", () => {
             let workingDays = calendar.getCalendar(2019).map(countWorkDays).reduce((a, c) => a + c, 0);
             expect(workingDays).to.equal(247);
         });
+    });
+
+    it("null and it should throw error", () => {
+        try {
+            let dayType = calendar.getCalendar(null);
+            expect.fail("Error did not threw");
+        } catch (e) {
+
+        }
+    });
+});
+
+describe("Calendar gets ", () => {
+    it("unknown locale and it should throw error", () => {
+        try {
+            new Calendar("ru1");
+            expect.fail("Error did not threw");
+        } catch (e) {
+
+        }
     });
 });

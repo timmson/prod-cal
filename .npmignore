@@ -14,6 +14,7 @@ test/
 .gitignore
 
 # Other
+.eslintrc.js
 .travis.yml
 
 # Webview
