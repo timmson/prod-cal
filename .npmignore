@@ -3,12 +3,11 @@
 
 # Node modules
 node_modules/
-docs/node_modules/
 
 # Test & Coverage
 .nyc_output
 coverage.lcov
-test
+test/
 
 # Git
 .git

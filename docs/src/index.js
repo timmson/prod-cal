@@ -1,7 +1,7 @@
 import "bootstrap";
 import "./index.scss";
 
-import Calendar from "../../index.js";
+import Calendar from "../index.js";
 
 import Vue from "vue"
 import Moment from "moment";
@@ -16,13 +16,13 @@ let app = new Vue({
     },
     methods: {
         buildCalendar: function () {
-            this.year = this.calendar.getYear(this.selectedYear).map((m, index) => {
+            this.year = this.calendar.getCalendar(this.selectedYear).map((m, index) => {
                     let momentMonth = Moment([this.selectedYear, index]);
                     let month = {
                         name: momentMonth.format("MMMM"),
                         working: {
                             days: m.filter(d => d !== "holiday").length,
-                            hours: m.filter(d => d !== "holiday").reduce((last, d) => last += d === "work_reduced" ? 7 : 8, 0)
+                            hours: m.filter(d => d !== "holiday").reduce((last, d) => last += (d === "work_reduced" ? 7 : 8), 0)
                         },
                         weeks: [],
                     };

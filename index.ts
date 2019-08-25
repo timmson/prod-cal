@@ -1,16 +1,23 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const cal = require("./calendars/ru.js");
+import * as cal from "./calendars/ru.js"
+
 class Calendar {
-    constructor(locale) {
+
+    public static DAY_WORK = "work";
+    public static DAY_HOLIDAY = "holiday";
+    public static DAY_WORK_REDUCED = "work_reduced";
+
+    constructor(locale?: string) {
         if (locale && locale !== "ru") {
             throw new Error("Locales differ from RU is not supported yet");
         }
+
     }
-    getCalendar(year, month, day) {
+
+    public getCalendar(year: number, month?: number, day?: number) {
         if (!year) {
             throw new Error("Year must be not null");
         }
+
         if (month) {
             if (day) {
                 let dayType = Calendar.DAY_WORK;
@@ -21,12 +28,12 @@ class Calendar {
                 }
                 return dayType;
             }
-            return Array.apply(null, { length: new Date(year, month, 0).getDate() }).map(Number.call, Number).map((d) => this.getCalendar(year, month, d + 1));
+
+            return Array.apply(null, {length: new Date(year, month, 0).getDate()}).map(Number.call, Number).map((d: number) => this.getCalendar(year, month, d + 1))
         }
-        return Array.apply(null, { length: 12 }).map(Number.call, Number).map((m) => this.getCalendar(year, m + 1));
+
+        return Array.apply(null, {length: 12}).map(Number.call, Number).map((m: number) => this.getCalendar(year, m + 1));
     }
 }
-Calendar.DAY_WORK = "work";
-Calendar.DAY_HOLIDAY = "holiday";
-Calendar.DAY_WORK_REDUCED = "work_reduced";
-exports.default = Calendar;
+
+export default Calendar;

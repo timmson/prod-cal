@@ -1,9 +1,10 @@
 {
   "name": "prod-cal",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Production Calendar",
   "main": "index.js",
   "scripts": {
+    "build": "npx tsc",
     "test": "npx mocha",
     "coverage": "nyc mocha && nyc report --reporter=text-lcov > coverage.lcov"
   },
@@ -20,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/timmson/prod-cal/issues"
   },
-  "homepage": "https://github.com/timmson/prod-cal#readme"
+  "homepage": "https://github.com/timmson/prod-cal#readme",
+  "devDependencies": {
+    "@types/chai": "4.2.0",
+    "@types/mocha": "5.2.7",
+    "chai": "4.2.0",
+    "mocha": "6.2.0",
+    "ts-node": "8.3.0",
+    "typescript": "3.5.3"
+  }
 }
