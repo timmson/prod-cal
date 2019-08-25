@@ -20,7 +20,7 @@
             <div class="col float-right mt-4 mr-2" v-for="(month) in year">
                 <table class="calendar">
                     <tr>
-                        <td class="month" colspan="7">{{ month.name }}</td>
+                        <td class="month" colspan="7">{{ month.name }} <span>[working {{month.working.days}}d /{{month.working.hours}}h]</span></td>
                     </tr>
                     <tr class="dayOfWeek">
                         <td class="work">mon</td>

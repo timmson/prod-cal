@@ -20,6 +20,10 @@ let app = new Vue({
                     let momentMonth = Moment([this.selectedYear, index]);
                     let month = {
                         name: momentMonth.format("MMMM"),
+                        working: {
+                            days: m.filter(d => d !== "holiday").length,
+                            hours: m.filter(d => d !== "holiday").reduce((last, d) => last += d === "work_reduced" ? 7 : 8, 0)
+                        },
                         weeks: [],
                     };
                     let monthStartsWith = momentMonth.clone().startOf("month").format("d") - 1;

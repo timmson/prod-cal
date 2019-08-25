@@ -7095,7 +7095,11 @@ span.clickable {
   background-color: #eee; }
 
 .calendar td.month {
-  background-color: #aaa; }
+  background-color: #aaa;
+  font-weight: bold; }
+  .calendar td.month span {
+    font-size: smaller;
+    font-weight: normal; }
 
 .calendar td.work {
   color: black; }

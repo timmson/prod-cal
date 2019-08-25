@@ -20,6 +20,12 @@ span.clickable {
 
   td.month {
     background-color: #aaa;
+    font-weight: bold;
+
+    span {
+      font-size: smaller;
+      font-weight: normal;
+    }
   }
 
   td.work {
