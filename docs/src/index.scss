@@ -12,12 +12,14 @@ span.clickable {
 
 .calendar {
 
+  min-width: 300px;
+
   tr.dayOfWeek td {
     background-color: #ccc;
   }
 
   td {
-    width: 14.28571428571429%;
+    width: 12.5%;
     text-align: center;
     border: 1px solid gray;
     background-color: #eee;
@@ -31,6 +33,11 @@ span.clickable {
       font-size: smaller;
       font-weight: normal;
     }
+  }
+
+  td.weekNum {
+    color: cornflowerblue;
+    font-style: italic;
   }
 
   td.work {

@@ -7089,32 +7089,31 @@ a.text-dark:hover, a.text-dark:focus {
 span.clickable {
   cursor: pointer; }
 
-.calendar tr.dayOfWeek td {
-  background-color: #ccc; }
-
-.calendar td {
-  width: 14.28571428571429%;
-  text-align: center;
-  border: 1px solid gray;
-  background-color: #eee; }
-
-.calendar td.month {
-  background-color: #aaa;
-  font-weight: bold; }
-  .calendar td.month span {
-    font-size: smaller;
-    font-weight: normal; }
-
-.calendar td.work {
-  color: black; }
-
-.calendar td.holiday {
-  font-weight: bold;
-  color: red; }
-
-.calendar td.work_reduced {
-  color: brown; }
-
-.calendar td.inactive {
-  color: darkgray; }
+.calendar {
+  min-width: 300px; }
+  .calendar tr.dayOfWeek td {
+    background-color: #ccc; }
+  .calendar td {
+    width: 12.5%;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: #eee; }
+  .calendar td.month {
+    background-color: #aaa;
+    font-weight: bold; }
+    .calendar td.month span {
+      font-size: smaller;
+      font-weight: normal; }
+  .calendar td.weekNum {
+    color: cornflowerblue;
+    font-style: italic; }
+  .calendar td.work {
+    color: black; }
+  .calendar td.holiday {
+    font-weight: bold;
+    color: red; }
+  .calendar td.work_reduced {
+    color: brown; }
+  .calendar td.inactive {
+    color: darkgray; }
 

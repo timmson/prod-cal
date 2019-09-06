@@ -17,22 +17,24 @@
             </div>
         </div>
         <div class="row ml-2">
-            <div class="col float-right mt-4 mr-2" v-for="(month) in year">
+            <div class="col float-right mt-4" v-for="(month) in year">
                 <table class="calendar">
                     <tr>
-                        <td class="month" colspan="7">{{ month.name }} <span>[working {{month.working.days}}d /{{month.working.hours}}h]</span></td>
+                        <td class="month" colspan="8">{{ month.name }} <span>[working {{month.working.days}}d /{{month.working.hours}}h]</span></td>
                     </tr>
                     <tr class="dayOfWeek">
-                        <td class="work">mon</td>
-                        <td class="work">tue</td>
-                        <td class="work">wed</td>
-                        <td class="work">thu</td>
-                        <td class="work">fri</td>
-                        <td class="holiday">sat</td>
-                        <td class="holiday">sun</td>
+                        <td class="work">#w</td>
+                        <td class="work">mo</td>
+                        <td class="work">tu</td>
+                        <td class="work">we</td>
+                        <td class="work">th</td>
+                        <td class="work">fr</td>
+                        <td class="holiday">sa</td>
+                        <td class="holiday">su</td>
                     </tr>
                     <tr v-for="(week, i) in month.weeks">
-                        <td :class="day.type" v-for="(day) in week">{{ day.date}}</td>
+                        <td class="weekNum">{{ week.number }}</td>
+                        <td :class="day.type" v-for="(day) in week.days">{{ day.date}}</td>
                     </tr>
                 </table>
             </div>

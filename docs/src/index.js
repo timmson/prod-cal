@@ -1,7 +1,7 @@
 import "bootstrap";
 import "./index.scss";
 
-import Calendar from "../index.js";
+import Calendar from "../../index";
 
 import Vue from "vue"
 import Moment from "moment";
@@ -28,34 +28,36 @@ let app = new Vue({
                     };
                     let monthStartsWith = momentMonth.clone().startOf("month").format("d") - 1;
                     for (let i = 0; i < 6; i++) {
-                        let week = [];
+                        let days = [];
+                        month.weeks[i] = {
+                            number: momentMonth.clone().startOf("month").add(i * 7  - monthStartsWith, "d").week()
+                        };
                         for (let j = 0; j < 7; j++) {
                             let cDay = i * 7 + j - monthStartsWith;
                             if (cDay >= 0 && cDay < m.length) {
-                                week[j] = {
+                                days[j] = {
                                     date: cDay + 1,
                                     type: m[cDay]
                                 }
                             } else {
                                 if (cDay < 0) {
-                                    week[j] = {
+                                    days[j] = {
                                         date: momentMonth.clone().startOf("month").add(cDay, "d").format("D"),
                                         type: "inactive"
                                     }
                                 } else {
-                                    week[j] = {
+                                    days[j] = {
                                         date: momentMonth.clone().endOf("month").add(cDay - m.length + 1, "d").format("D"),
                                         type: "inactive"
                                     }
                                 }
                             }
                         }
-                        month.weeks[i] = week;
+                        month.weeks[i].days = days;
                     }
                     return month;
                 }
             );
-            console.log(this.year);
         }
     },
     created() {
