@@ -3,9 +3,12 @@ module.exports = {
         "browser": true,
         "commonjs": true,
         "es6": true,
-        "mocha":true
+        "mocha": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended"/*,
+        "plugin:mocha/recommended"*/
+    ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -13,5 +16,25 @@ module.exports = {
     "parserOptions": {
         "ecmaVersion": 2018
     },
-    "rules": {}
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }/*,
+    "plugins": [
+        "mocha"
+    ]*/
 };
