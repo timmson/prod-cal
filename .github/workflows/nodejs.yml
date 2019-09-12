@@ -22,7 +22,7 @@ jobs:
         npm i mocha nyc codecov  -g
         npm i
         npm run lint
-        npm run coverage
-        codecov
+        npm run coverage && codecov
       env:
         CI: true
+        CODECOV_TOKEN: 87495401-16fc-475c-96e2-bea0ca700aaf
