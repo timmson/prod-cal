@@ -1,6 +1,6 @@
 {
   "name": "prod-cal",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Production Calendar",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,9 @@
   "homepage": "https://github.com/timmson/prod-cal#readme",
   "devDependencies": {
     "chai": "4.2.0",
-    "eslint": "6.2.2",
-    "mocha": "6.2.0",
-    "nyc": "14.1.1"
+    "eslint": "6.8.0",
+    "mocha": "6.2.3",
+    "@types/mocha": "7.0.2",
+    "nyc": "15.0.1"
   }
 }
