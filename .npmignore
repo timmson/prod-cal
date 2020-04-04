@@ -15,7 +15,8 @@ test/
 
 # Other
 .eslintrc.js
-.travis.yml
+.github/workflows/nodejs.yml
+
 
 # Webview
 docs/
