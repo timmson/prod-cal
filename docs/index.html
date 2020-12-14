@@ -13,7 +13,7 @@
         </nav>
         <div class="row ml-2">
             <div class="col mt-4 text-center">
-                <h3><span class="clickable" @click="request.year--; buildCalendar();">◀</span> {{ request.year }} <span class="clickable" @click="request.year++; buildCalendar();">▶</span></h3>
+                <h3><span class="clickable" @click="decreaseYear();">◀</span> {{ request.year }} <span class="clickable" @click="increaseYear();">▶</span></h3>
             </div>
         </div>
         <div class="row ml-2">

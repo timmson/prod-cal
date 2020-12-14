@@ -27,7 +27,17 @@ let app = new Vue({
         year: {}
     },
     methods: {
-        buildCalendar: function () {
+        decreaseYear: function() {
+            this.request.year--;
+            this.buildCalendar();
+            this.updateUrl();
+        },
+        increaseYear: function() {
+            this.request.year++;
+            this.buildCalendar();
+            this.updateUrl();
+        },
+        buildCalendar: function() {
             this.year = this.calendar.getCalendar(this.request.year).map((m, index) => {
                     let momentMonth = Moment([this.request.year, index]);
                     let month = {
@@ -71,10 +81,12 @@ let app = new Vue({
                     return month;
                 }
             );
-            window.history.replaceState({}, "Production Calendar", "?" + QueryString.stringify(this.request));
         },
         selectMonth(month) {
             this.request.month = month;
+            this.updateUrl();
+        },
+        updateUrl() {
             window.history.replaceState({}, "Production Calendar", "?" + QueryString.stringify(this.request));
         }
     },
