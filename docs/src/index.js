@@ -3,21 +3,30 @@ import "./index.scss";
 
 import Calendar from "../../index";
 
+import URL from "url";
+import QueryString from "querystring";
 import Vue from "vue"
 import Moment from "moment";
+
+let url = URL.parse(window.location.href);
+let params = QueryString.parse(url.query);
+
+let request = {
+    year: params["year"] || parseInt(Moment().format("YYYY"))
+}
 
 let app = new Vue({
     el: '#app',
     data: {
-        currentYear: parseInt(Moment().format("YYYY")),
+        currentYear: request.year,
+        request: request,
         calendar: new Calendar("ru"),
-        selectedYear: {},
         year: {}
     },
     methods: {
         buildCalendar: function () {
-            this.year = this.calendar.getCalendar(this.selectedYear).map((m, index) => {
-                    let momentMonth = Moment([this.selectedYear, index]);
+            this.year = this.calendar.getCalendar(this.request.year).map((m, index) => {
+                    let momentMonth = Moment([this.request.year, index]);
                     let month = {
                         name: momentMonth.format("MMMM"),
                         working: {
@@ -58,10 +67,8 @@ let app = new Vue({
                     return month;
                 }
             );
+            window.history.replaceState({}, "Production Calendar", "?" + QueryString.stringify(this.request));
         }
-    },
-    created() {
-        this.selectedYear = this.currentYear;
     },
     mounted() {
         this.buildCalendar();
