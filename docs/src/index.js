@@ -11,14 +11,17 @@ import Moment from "moment";
 let url = URL.parse(window.location.href);
 let params = QueryString.parse(url.query);
 
+
+let currentYear = parseInt(Moment().format("YYYY"));
 let request = {
-    year: params["year"] || parseInt(Moment().format("YYYY"))
+    year: params["year"] || currentYear,
+    month: params["month"] || parseInt(Moment().format("M"))
 }
 
 let app = new Vue({
     el: '#app',
     data: {
-        currentYear: request.year,
+        currentYear: currentYear,
         request: request,
         calendar: new Calendar("ru"),
         year: {}
@@ -28,6 +31,7 @@ let app = new Vue({
             this.year = this.calendar.getCalendar(this.request.year).map((m, index) => {
                     let momentMonth = Moment([this.request.year, index]);
                     let month = {
+                        number: momentMonth.format("M"),
                         name: momentMonth.format("MMMM"),
                         working: {
                             days: m.filter(d => d !== "holiday").length,
@@ -67,6 +71,10 @@ let app = new Vue({
                     return month;
                 }
             );
+            window.history.replaceState({}, "Production Calendar", "?" + QueryString.stringify(this.request));
+        },
+        selectMonth(month) {
+            this.request.month = month;
             window.history.replaceState({}, "Production Calendar", "?" + QueryString.stringify(this.request));
         }
     },
