@@ -1,12 +1,13 @@
 {
   "name": "prod-cal",
-  "version": "1.2.2",
+  "version": "1.2.5",
   "description": "Production Calendar",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint index.js ./test",
-    "test": "npx mocha",
-    "coverage": "npx nyc mocha && nyc report --reporter=text-lcov > coverage.lcov"
+    "lint": "npx eslint index.js ./test --fix",
+    "test": "npx jest",
+    "check": "npm run lint && npm test",
+    "coverage": "npx jest --collectCoverage"
   },
   "repository": {
     "type": "git",
@@ -23,10 +24,8 @@
   },
   "homepage": "https://github.com/timmson/prod-cal#readme",
   "devDependencies": {
-    "chai": "4.2.0",
+    "@jest/types": "^26.6.2",
     "eslint": "6.8.0",
-    "mocha": "6.2.3",
-    "@types/mocha": "7.0.2",
-    "nyc": "15.0.1"
+    "jest": "^26.6.3"
   }
 }

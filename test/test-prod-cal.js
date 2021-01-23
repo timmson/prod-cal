@@ -1,6 +1,4 @@
 const Calendar = require("../index.js");
-const {expect} = require("chai");
-require("mocha");
 
 function countWorkDays(m) {
 	return m.filter(isWork).length;
@@ -10,59 +8,55 @@ function isWork(d) {
 	return d.indexOf("work") >= 0;
 }
 
-describe("Calendar gets ", function() {
-	it("unknown locale and it should throw error", function() {
-		try {
-			new Calendar("ru1");
-			expect.fail("Error did not threw");
-		} catch (e) {
-			expect(true).to.be.true;
-		}
-	});
+let calendar = new Calendar("ru");
+
+test("Calendar gets unknown locale and test should throw error", () => {
+	expect(() => new Calendar("ru1")).toThrow();
 });
 
-describe("Calendar", function() {
-	let calendar = new Calendar("ru");
+describe("Calendar gets day", () => {
 
-	describe("gets day as", function() {
+	test("as 29-01-2019 and test should return work day", () => {
+		let dayType = calendar.getCalendar(2019, 1, 28);
 
-		it("29-01-2019 and it should return work day", function() {
-			let dayType = calendar.getCalendar(2019, 1, 28);
-			expect(dayType).to.equal(Calendar.DAY_WORK);
-		});
-
-		it("25-08-2019 and it should return holiday", function() {
-			let dayType = calendar.getCalendar(2019, 8, 25);
-			expect(dayType).to.equal(Calendar.DAY_HOLIDAY);
-		});
-
-		it("22-02-2019 and it should return reduced workday", function() {
-			let dayType = calendar.getCalendar(2019, 2, 22);
-			expect(dayType).to.equal(Calendar.DAY_WORK_REDUCED);
-		});
+		expect(dayType).toEqual(Calendar.DAY_WORK);
 	});
 
-	describe("gets month as", function() {
-		it("Feb.2019 should return 20 work days", function() {
-			let workingDays = calendar.getCalendar(2019, 2).filter(isWork).length;
-			expect(workingDays).to.equal(20);
-		});
+	test("as 25-08-2019 and test should return holiday", () => {
+		let dayType = calendar.getCalendar(2019, 8, 25);
+
+		expect(dayType).toEqual(Calendar.DAY_HOLIDAY);
 	});
 
-	describe("gets year as", function() {
-		it("2019 and it should return 247 work days", function() {
-			let workingDays = calendar.getCalendar(2019).map(countWorkDays).reduce((a, c) => a + c, 0);
-			expect(workingDays).to.equal(247);
-		});
+	test("as 22-02-2019 and test should return reduced workday", () => {
+		let dayType = calendar.getCalendar(2019, 2, 22);
 
-		it("null and it should throw error", function() {
-			try {
-				calendar.getCalendar(null);
-				expect.fail("Error did not threw");
-			} catch (e) {
-				expect(true).to.be.true;
-			}
-		});
+		expect(dayType).toEqual(Calendar.DAY_WORK_REDUCED);
+	});
+
+});
+
+describe("Calendar gets month as", () => {
+
+	test("Feb.2019 should return 20 work days", () => {
+		let workingDays = calendar.getCalendar(2019, 2).filter(isWork).length;
+
+		expect(workingDays).toEqual(20);
+	});
+
+});
+
+
+describe("Calendar gets year as", () => {
+
+	test("2019 and test should return 247 work days", () => {
+		let workingDays = calendar.getCalendar(2019).map(countWorkDays).reduce((a, c) => a + c, 0);
+
+		expect(workingDays).toEqual(247);
+	});
+
+	test("null and test should throw error", () => {
+		expect(() => calendar.getCalendar(null)).toThrow();
 	});
 
 });
