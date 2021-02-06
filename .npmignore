@@ -5,17 +5,17 @@
 node_modules/
 
 # Test & Coverage
-.nyc_output
-coverage.lcov
+coverage/
 test/
+jest.config.js
 
 # Git
-.git
+.git/
 .gitignore
 
 # Other
 .eslintrc.js
-.github/workflows/nodejs.yml
+.github/
 
 
 # Webview
