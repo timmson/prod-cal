@@ -1,6 +1,6 @@
 {
   "name": "prod-cal",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Production Calendar",
   "main": "index.js",
   "scripts": {

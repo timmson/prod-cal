@@ -14,6 +14,12 @@ class Calendar {
 			throw new Error("Year must be not null");
 		}
 
+		if (year instanceof Date) {
+			day = year.getDate();
+			month = year.getMonth() + 1;
+			year = year.getFullYear();
+		}
+
 		if (month) {
 			if (day) {
 				let dayType = Calendar.DAY_WORK;
