@@ -17,21 +17,18 @@ test("Calendar gets unknown locale and test should throw error", () => {
 describe("Calendar gets day", () => {
 
 	test("as 29-01-2019 and test should return work day", () => {
-		let dayType = calendar.getCalendar(2019, 1, 28);
-
-		expect(dayType).toEqual(Calendar.DAY_WORK);
+		expect(calendar.getCalendar(2019, 1, 28)).toEqual(Calendar.DAY_WORK);
+		expect(calendar.getCalendar(new Date("2019-01-28"))).toEqual(Calendar.DAY_WORK);
 	});
 
 	test("as 25-08-2019 and test should return holiday", () => {
-		let dayType = calendar.getCalendar(2019, 8, 25);
-
-		expect(dayType).toEqual(Calendar.DAY_HOLIDAY);
+		expect(calendar.getCalendar(2019, 8, 25)).toEqual(Calendar.DAY_HOLIDAY);
+		expect(calendar.getCalendar(new Date("2019-08-25"))).toEqual(Calendar.DAY_HOLIDAY);
 	});
 
 	test("as 22-02-2019 and test should return reduced workday", () => {
-		let dayType = calendar.getCalendar(2019, 2, 22);
-
-		expect(dayType).toEqual(Calendar.DAY_WORK_REDUCED);
+		expect(calendar.getCalendar(2019, 2, 22)).toEqual(Calendar.DAY_WORK_REDUCED);
+		expect(calendar.getCalendar(new Date("2019-02-22"))).toEqual(Calendar.DAY_WORK_REDUCED);
 	});
 
 });
