@@ -1,7 +1,7 @@
 # Production Calendar
 
 [![codecov](https://codecov.io/gh/timmson/prod-cal/branch/master/graph/badge.svg)](https://codecov.io/gh/timmson/prod-cal)
-[![codacy](https://api.codacy.com/project/badge/Grade/c513099cc1ec4e849c123705ab04b369)](https://www.codacy.com/app/timmson666/prod-cal)
+[![codacy](https://api.codacy.com/project/badge/Grade/c513099cc1ec4e849c123705ab04b369)](https://app.codacy.com/gh/timmson/prod-cal)
 [![version](https://img.shields.io/npm/v/prod-cal.svg)](https://www.npmjs.com/package/prod-cal)
 [![license](https://img.shields.io/npm/l/prod-cal.svg)](https://www.npmjs.com/package/prod-cal)
 
