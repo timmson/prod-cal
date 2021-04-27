@@ -1,6 +1,6 @@
 {
   "name": "prod-cal-webview",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Production Calendar Webview",
   "private": true,
   "dependencies": {
