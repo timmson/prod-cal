@@ -19,7 +19,7 @@ new Vue({
 	el: "#app",
 	data: {
 		currentYear: currentYear,
-		shareUrl: `${telegramShareUrl}?url=${encodeURIComponent(window.location.href)}`,
+		shareUrl: "",
 		request: request,
 		calendar: new Calendar("ru"),
 		year: {}
@@ -93,5 +93,6 @@ new Vue({
 	},
 	mounted() {
 		this.buildCalendar();
+		this.updateUrl();
 	}
 });
