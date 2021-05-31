@@ -6,6 +6,8 @@ import Calendar from "../../index";
 import Vue from "vue";
 import Moment from "moment";
 
+const telegramShareUrl = "https://t.me/share/url";
+
 const params = new URL(window.location.href).searchParams;
 const currentYear = parseInt(Moment().format("YYYY"));
 const request = {
@@ -17,6 +19,7 @@ new Vue({
 	el: "#app",
 	data: {
 		currentYear: currentYear,
+		shareUrl: "",
 		request: request,
 		calendar: new Calendar("ru"),
 		year: {}
@@ -85,6 +88,7 @@ new Vue({
 			params.set("year", this.request.year);
 			params.set("month", this.request.month);
 			window.history.replaceState({}, "Production Calendar", "?" + params.toString());
+			this.shareUrl = `${telegramShareUrl}?url=${encodeURIComponent(window.location.href)}`;
 		}
 	},
 	mounted() {
