@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/timmson/prod-cal#readme",
   "devDependencies": {
-    "@jest/types": "^26.6.2",
+    "@jest/types": "^27.1.1",
     "eslint": "6.8.0",
-    "jest": "27.2.1"
+    "jest": "^27.2.1"
   }
 }
