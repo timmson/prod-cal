@@ -18,7 +18,7 @@
         </div>
         <div class="row ml-2">
             <div class="col float-right mt-4" v-for="(month) in year">
-                <table :class="'calendar ' + (month.number == request.month ? 'calendar-focused' : '')" @click="selectMonth(month.number)">
+                <table :class="'calendar ' + (month.number === request.month ? 'calendar-focused' : '')" @click="selectMonth(month.number)">
                     <tr>
                         <td class="month" colspan="8">{{ month.name }} - <span>[working {{month.working.days}}d /{{month.working.hours}}h]</span></td>
                     </tr>
@@ -32,7 +32,7 @@
                         <td class="holiday">sa</td>
                         <td class="holiday">su</td>
                     </tr>
-                    <tr v-for="(week, i) in month.weeks">
+                    <tr v-for="(week) in month.weeks">
                         <td class="weekNum">{{ week.number }}</td>
                         <td :class="day.type" v-for="(day) in week.days">{{ day.date}}</td>
                     </tr>
