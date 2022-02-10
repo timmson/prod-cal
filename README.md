@@ -5,7 +5,7 @@
 [![version](https://img.shields.io/npm/v/prod-cal.svg)](https://www.npmjs.com/package/prod-cal)
 [![license](https://img.shields.io/npm/l/prod-cal.svg)](https://www.npmjs.com/package/prod-cal)
 
-[..::Live demo::..](https://timmson.github.io/prod-cal/)
+[..::Live demo::..](https://timmson.github.io/prod-cal-ui/)
 
 ## Installation
 ```bash

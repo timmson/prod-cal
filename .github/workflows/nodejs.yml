@@ -26,24 +26,3 @@ jobs:
       env:
         CI: true
         CODECOV_TOKEN: 87495401-16fc-475c-96e2-bea0ca700aaf
-
-    - name: Compile App
-      run: |
-        cd ./docs
-        npm i
-        npm run prod
-      env:
-        CI: true
-
-    - name: Commit files
-      run: |
-        git config --local user.email "prod-cal[bot]@users.noreply.github.com"
-        git config --local user.name "prod-cal[bot]"
-        git add -A
-        git diff-index --quiet HEAD || git commit -m "Compile App"
-
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
