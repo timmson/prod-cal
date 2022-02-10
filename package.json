@@ -4,9 +4,8 @@
   "description": "Production Calendar",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint index.js ./test ./docs/src/index.js --fix",
+    "lint": "npx eslint index.js ./test --fix",
     "test": "npx jest",
-    "check": "npm run lint && npm test",
     "coverage": "npx jest --collectCoverage"
   },
   "repository": {
