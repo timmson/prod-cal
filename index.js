@@ -1,5 +1,8 @@
 const cal = require("./calendars/ru.js");
 
+const getSequencedArray = (length, startFrom) =>
+	Array.from(Array(length).keys()).map((i) => i + startFrom || 0);
+
 class Calendar {
 
 	constructor(locale) {
@@ -31,10 +34,10 @@ class Calendar {
 				return dayType;
 			}
 
-			return Array.apply(null, {length: new Date(year, month, 0).getDate()}).map(Number.call, Number).map(d => this.getCalendar(year, month, d + 1));
+			return getSequencedArray(new Date(year, month, 0).getDate(), 1).map(day => this.getCalendar(year, month, day));
 		}
 
-		return Array.apply(null, {length: 12}).map(Number.call, Number).map(m => this.getCalendar(year, m + 1));
+		return getSequencedArray(12, 1).map(month => this.getCalendar(year, month));
 	}
 }
 
