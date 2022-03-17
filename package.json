@@ -4,7 +4,10 @@
   "description": "Production Calendar",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint index.js ./test --fix",
+    "lint": "npx eslint ./src ./test --fix",
+    "watch": "npx webpack --mode development --watch",
+    "dev": "npx webpack --mode development",
+    "prod": "npx webpack --mode production",
     "test": "npx jest",
     "coverage": "npx jest --collectCoverage"
   },
@@ -23,8 +26,17 @@
   },
   "homepage": "https://github.com/timmson/prod-cal#readme",
   "devDependencies": {
-    "@jest/types": "^27.4.2",
+    "@babel/preset-env": "7.16.11",
+    "@babel/preset-typescript": "7.16.7",
+    "@types/jest": "27.4.1",
+    "@typescript-eslint/eslint-plugin": "5.15.0",
     "eslint": "8.6.0",
-    "jest": "^27.4.7"
+    "jest": "^27.4.7",
+    "ts-loader": "9.2.8",
+    "webpack": "5.70.0",
+    "webpack-cli": "4.9.2"
+  },
+  "dependencies": {
+    "typescript": "4.6.2"
   }
 }

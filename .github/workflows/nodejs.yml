@@ -22,6 +22,7 @@ jobs:
       run: |
         npm i
         npm run lint
+        npm run prod
         npm run coverage && npx codecov
       env:
         CI: true
