@@ -4,7 +4,7 @@
   "description": "Production Calendar",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint ./src ./test --fix",
+    "lint": "npx eslint ./src/*.ts --fix",
     "watch": "tsc -p tsconfig.json --watch",
     "build": "tsc -p tsconfig.json",
     "test": "npx jest",
@@ -25,12 +25,12 @@
   },
   "homepage": "https://github.com/timmson/prod-cal#readme",
   "devDependencies": {
-    "@babel/preset-env": "7.16.11",
-    "@babel/preset-typescript": "7.16.7",
-    "@types/jest": "27.4.1",
-    "@typescript-eslint/eslint-plugin": "5.15.0",
-    "eslint": "8.6.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "eslint": "^8.11.0",
     "jest": "^27.4.7",
-    "typescript": "4.6.2"
+    "typescript": "^4.6.2"
   }
 }
