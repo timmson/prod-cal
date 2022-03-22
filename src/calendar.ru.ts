@@ -1,4 +1,8 @@
-module.exports = {
+type CalendarSourceType = {
+    [key: string]: Array<Array<string>>
+}
+
+const calendarSource: CalendarSourceType = {
 	"1999": [
 		[
 			"1",
@@ -3989,4 +3993,6 @@ module.exports = {
 			"31*"
 		]
 	]
-};
+}
+
+export default calendarSource

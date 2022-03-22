@@ -1,5 +1,6 @@
 module.exports = {
-	collectCoverage:true,
+	collectCoverage: true,
+	collectCoverageFrom: ["./src/*"],
 	coverageReporters: ["lcov"],
-	testMatch:  [ "**/test/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)" ]
+	testMatch: ["**/test/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"]
 };
