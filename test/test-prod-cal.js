@@ -1,5 +1,4 @@
-import Calendar from "../src/index"
-//import Calendar from "../index_1.js"
+const Calendar = require("../index.js")
 
 function countWorkDays(m) {
 	return m.filter(isWork).length

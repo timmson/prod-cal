@@ -1,6 +1,6 @@
 import cal from "../calendars/ru"
 
-const getSequencedArray = (length: number, startFrom = 0) =>
+const getSequencedArray = (length: number, startFrom = 0): Array<number> =>
 	Array.from(Array(length).keys()).map((i) => i + startFrom)
 
 class Calendar {
@@ -16,7 +16,7 @@ class Calendar {
 
 	}
 
-	getCalendar(year: number | Date, month?: number, day?: number) {
+	public getCalendar(year: Date | number, month?: number, day?: number): string | any {
 		if (!year) {
 			throw new Error("Year must be not null")
 		}
@@ -45,4 +45,4 @@ class Calendar {
 	}
 }
 
-export default Calendar
+export = Calendar

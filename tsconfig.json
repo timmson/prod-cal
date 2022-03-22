@@ -1,11 +1,16 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
     "moduleResolution": "node",
-    "module": "es2022",
-    "target": "es6",
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true
+    "module": "CommonJS",
+    "outDir": ".",
+    "target": "ES6",
+    "strict": false
   },
+  "files": [
+    "./src/index.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
