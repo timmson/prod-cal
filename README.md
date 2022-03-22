@@ -21,20 +21,20 @@ const Calendar = require("prod-cal");
 let calendar = new Calendar("ru");
 
 //Will print "holiday"
-console.log(calendar.getCalendar(2019, 1, 27));
-console.log(calendar.getCalendar(new Date("2019-01-27")));
+console.log(calendar.getYear(2019, 1, 27));
+console.log(calendar.getDate(new Date("2019-01-27")));
 
 //Will print "work"
-console.log(calendar.getCalendar(2019, 1, 28));
-console.log(calendar.getCalendar(new Date("2019-01-28")));
+console.log(calendar.getYear(2019, 1, 28));
+console.log(calendar.getDate(new Date("2019-01-28")));
 
 //Will print "work_reduced"
-console.log(calendar.getCalendar(2019, 2, 22));
-console.log(calendar.getCalendar(new Date("2019-22-22")));
+console.log(calendar.getYear(2019, 2, 22));
+console.log(calendar.getDate(new Date("2019-22-22")));
 
 //Will print "20"
-console.log(calendar.getCalendar(2019, 2).filter(d => d.indexOf("work") >= 0).length);
+console.log(calendar.getMonth(2019, 2).filter(d => d.indexOf("work") >= 0).length);
 
 //Will print "248"
-console.log(calendar.getCalendar(2020).map(m => m.filter(d => d.indexOf("work") >= 0).length).reduce((a, c) => a + c, 0));
+console.log(calendar.getYear(2020).map(m => m.filter(d => d.indexOf("work") >= 0).length).reduce((a, c) => a + c, 0));
 ```
