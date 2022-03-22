@@ -4,7 +4,7 @@
     "declaration": true,
     "moduleResolution": "node",
     "module": "CommonJS",
-    "outDir": ".",
+    "outDir": "./dist/",
     "target": "ES6"
   },
   "files": [

@@ -2,7 +2,7 @@
   "name": "prod-cal",
   "version": "2.0.0",
   "description": "Production Calendar",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "lint": "npx eslint ./src/*.ts --fix",
     "watch": "tsc -p tsconfig.json --watch",
@@ -29,6 +29,7 @@
     "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "babel-plugin-replace-ts-export-assignment": "^0.0.2",
     "eslint": "^8.11.0",
     "jest": "^27.4.7",
     "typescript": "^4.6.2"

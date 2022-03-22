@@ -1,3 +1,4 @@
 module.exports = {
-    presets: ["@babel/preset-env", "@babel/preset-typescript"],
+	plugins: ["babel-plugin-replace-ts-export-assignment"],
+	presets: ["@babel/preset-env", "@babel/preset-typescript"],
 };
