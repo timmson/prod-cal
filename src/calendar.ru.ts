@@ -3748,9 +3748,9 @@ const calendarSource: CalendarSourceType = {
 			"14",
 			"20",
 			"21",
-			"27",
 			"28",
-			"30*"
+			"29",
+			"30"
 		],
 		[
 			"1",
@@ -3758,6 +3758,7 @@ const calendarSource: CalendarSourceType = {
 			"5",
 			"8*",
 			"9",
+			"10",
 			"11",
 			"12",
 			"18",
@@ -3841,9 +3842,9 @@ const calendarSource: CalendarSourceType = {
 			"15",
 			"21",
 			"22",
-			"28",
 			"29",
-			"31*"
+			"30",
+			"31"
 		]
 	],
 	"2025": [

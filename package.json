@@ -1,6 +1,6 @@
 {
   "name": "prod-cal",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Production Calendar",
   "main": "./dist/index.js",
   "scripts": {
@@ -25,14 +25,14 @@
   },
   "homepage": "https://github.com/timmson/prod-cal#readme",
   "devDependencies": {
-    "@babel/preset-env": "^7.19.4",
-    "@babel/preset-typescript": "^7.21.5",
-    "@types/jest": "^29.5.0",
-    "@typescript-eslint/typescript-estree" : "^5.59.7",
-    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@babel/preset-env": "^7.23.5",
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/jest": "^29.5.10",
+    "@typescript-eslint/typescript-estree" : "^6.13.1",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
     "babel-plugin-replace-ts-export-assignment": "^0.0.2",
-    "eslint": "^8.41.0",
-    "jest": "^29.5.0",
-    "typescript": "^5.0.4"
+    "eslint": "^8.54.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.3.2"
   }
 }
