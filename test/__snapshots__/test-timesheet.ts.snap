@@ -1,0 +1,983 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timesheet should  return valid timesheet for 2023-9-18 - 2023-12-15 1`] = `
+{
+  "months": [
+    {
+      "days": [
+        {
+          "date": 18,
+          "hours": 8,
+        },
+        {
+          "date": 19,
+          "hours": 8,
+        },
+        {
+          "date": 20,
+          "hours": 8,
+        },
+        {
+          "date": 21,
+          "hours": 8,
+        },
+        {
+          "date": 22,
+          "hours": 8,
+        },
+        {
+          "date": 23,
+          "hours": 0,
+        },
+        {
+          "date": 24,
+          "hours": 0,
+        },
+        {
+          "date": 25,
+          "hours": 8,
+        },
+        {
+          "date": 26,
+          "hours": 8,
+        },
+        {
+          "date": 27,
+          "hours": 8,
+        },
+        {
+          "date": 28,
+          "hours": 8,
+        },
+        {
+          "date": 29,
+          "hours": 8,
+        },
+        {
+          "date": 30,
+          "hours": 0,
+        },
+      ],
+      "month": 9,
+      "summary": {
+        "days": 10,
+        "hours": 80,
+      },
+      "year": 2023,
+    },
+    {
+      "days": [
+        {
+          "date": 1,
+          "hours": 0,
+        },
+        {
+          "date": 2,
+          "hours": 8,
+        },
+        {
+          "date": 3,
+          "hours": 8,
+        },
+        {
+          "date": 4,
+          "hours": 8,
+        },
+        {
+          "date": 5,
+          "hours": 8,
+        },
+        {
+          "date": 6,
+          "hours": 8,
+        },
+        {
+          "date": 7,
+          "hours": 0,
+        },
+        {
+          "date": 8,
+          "hours": 0,
+        },
+        {
+          "date": 9,
+          "hours": 8,
+        },
+        {
+          "date": 10,
+          "hours": 8,
+        },
+        {
+          "date": 11,
+          "hours": 8,
+        },
+        {
+          "date": 12,
+          "hours": 8,
+        },
+        {
+          "date": 13,
+          "hours": 8,
+        },
+        {
+          "date": 14,
+          "hours": 0,
+        },
+        {
+          "date": 15,
+          "hours": 0,
+        },
+        {
+          "date": 16,
+          "hours": 8,
+        },
+        {
+          "date": 17,
+          "hours": 8,
+        },
+        {
+          "date": 18,
+          "hours": 8,
+        },
+        {
+          "date": 19,
+          "hours": 8,
+        },
+        {
+          "date": 20,
+          "hours": 8,
+        },
+        {
+          "date": 21,
+          "hours": 0,
+        },
+        {
+          "date": 22,
+          "hours": 0,
+        },
+        {
+          "date": 23,
+          "hours": 8,
+        },
+        {
+          "date": 24,
+          "hours": 8,
+        },
+        {
+          "date": 25,
+          "hours": 8,
+        },
+        {
+          "date": 26,
+          "hours": 8,
+        },
+        {
+          "date": 27,
+          "hours": 8,
+        },
+        {
+          "date": 28,
+          "hours": 0,
+        },
+        {
+          "date": 29,
+          "hours": 0,
+        },
+        {
+          "date": 30,
+          "hours": 8,
+        },
+        {
+          "date": 31,
+          "hours": 8,
+        },
+      ],
+      "month": 10,
+      "summary": {
+        "days": 22,
+        "hours": 176,
+      },
+      "year": 2023,
+    },
+    {
+      "days": [
+        {
+          "date": 1,
+          "hours": 8,
+        },
+        {
+          "date": 2,
+          "hours": 8,
+        },
+        {
+          "date": 3,
+          "hours": 7,
+        },
+        {
+          "date": 4,
+          "hours": 0,
+        },
+        {
+          "date": 5,
+          "hours": 0,
+        },
+        {
+          "date": 6,
+          "hours": 0,
+        },
+        {
+          "date": 7,
+          "hours": 8,
+        },
+        {
+          "date": 8,
+          "hours": 8,
+        },
+        {
+          "date": 9,
+          "hours": 8,
+        },
+        {
+          "date": 10,
+          "hours": 8,
+        },
+        {
+          "date": 11,
+          "hours": 0,
+        },
+        {
+          "date": 12,
+          "hours": 0,
+        },
+        {
+          "date": 13,
+          "hours": 8,
+        },
+        {
+          "date": 14,
+          "hours": 8,
+        },
+        {
+          "date": 15,
+          "hours": 8,
+        },
+        {
+          "date": 16,
+          "hours": 8,
+        },
+        {
+          "date": 17,
+          "hours": 8,
+        },
+        {
+          "date": 18,
+          "hours": 0,
+        },
+        {
+          "date": 19,
+          "hours": 0,
+        },
+        {
+          "date": 20,
+          "hours": 8,
+        },
+        {
+          "date": 21,
+          "hours": 8,
+        },
+        {
+          "date": 22,
+          "hours": 8,
+        },
+        {
+          "date": 23,
+          "hours": 8,
+        },
+        {
+          "date": 24,
+          "hours": 8,
+        },
+        {
+          "date": 25,
+          "hours": 0,
+        },
+        {
+          "date": 26,
+          "hours": 0,
+        },
+        {
+          "date": 27,
+          "hours": 8,
+        },
+        {
+          "date": 28,
+          "hours": 8,
+        },
+        {
+          "date": 29,
+          "hours": 8,
+        },
+        {
+          "date": 30,
+          "hours": 8,
+        },
+      ],
+      "month": 11,
+      "summary": {
+        "days": 21,
+        "hours": 167,
+      },
+      "year": 2023,
+    },
+    {
+      "days": [
+        {
+          "date": 1,
+          "hours": 8,
+        },
+        {
+          "date": 2,
+          "hours": 0,
+        },
+        {
+          "date": 3,
+          "hours": 0,
+        },
+        {
+          "date": 4,
+          "hours": 8,
+        },
+        {
+          "date": 5,
+          "hours": 8,
+        },
+        {
+          "date": 6,
+          "hours": 8,
+        },
+        {
+          "date": 7,
+          "hours": 8,
+        },
+        {
+          "date": 8,
+          "hours": 8,
+        },
+        {
+          "date": 9,
+          "hours": 0,
+        },
+        {
+          "date": 10,
+          "hours": 0,
+        },
+        {
+          "date": 11,
+          "hours": 8,
+        },
+        {
+          "date": 12,
+          "hours": 8,
+        },
+        {
+          "date": 13,
+          "hours": 8,
+        },
+        {
+          "date": 14,
+          "hours": 8,
+        },
+        {
+          "date": 15,
+          "hours": 8,
+        },
+      ],
+      "month": 12,
+      "summary": {
+        "days": 11,
+        "hours": 88,
+      },
+      "year": 2023,
+    },
+  ],
+  "summary": {
+    "days": 64,
+    "hours": 511,
+  },
+}
+`;
+
+exports[`Timesheet should  return valid timesheet for 2023-11-1 - 2023-11-30 1`] = `
+{
+  "months": [
+    {
+      "days": [
+        {
+          "date": 1,
+          "hours": 8,
+        },
+        {
+          "date": 2,
+          "hours": 8,
+        },
+        {
+          "date": 3,
+          "hours": 7,
+        },
+        {
+          "date": 4,
+          "hours": 0,
+        },
+        {
+          "date": 5,
+          "hours": 0,
+        },
+        {
+          "date": 6,
+          "hours": 0,
+        },
+        {
+          "date": 7,
+          "hours": 8,
+        },
+        {
+          "date": 8,
+          "hours": 8,
+        },
+        {
+          "date": 9,
+          "hours": 8,
+        },
+        {
+          "date": 10,
+          "hours": 8,
+        },
+        {
+          "date": 11,
+          "hours": 0,
+        },
+        {
+          "date": 12,
+          "hours": 0,
+        },
+        {
+          "date": 13,
+          "hours": 8,
+        },
+        {
+          "date": 14,
+          "hours": 8,
+        },
+        {
+          "date": 15,
+          "hours": 8,
+        },
+        {
+          "date": 16,
+          "hours": 8,
+        },
+        {
+          "date": 17,
+          "hours": 8,
+        },
+        {
+          "date": 18,
+          "hours": 0,
+        },
+        {
+          "date": 19,
+          "hours": 0,
+        },
+        {
+          "date": 20,
+          "hours": 8,
+        },
+        {
+          "date": 21,
+          "hours": 8,
+        },
+        {
+          "date": 22,
+          "hours": 8,
+        },
+        {
+          "date": 23,
+          "hours": 8,
+        },
+        {
+          "date": 24,
+          "hours": 8,
+        },
+        {
+          "date": 25,
+          "hours": 0,
+        },
+        {
+          "date": 26,
+          "hours": 0,
+        },
+        {
+          "date": 27,
+          "hours": 8,
+        },
+        {
+          "date": 28,
+          "hours": 8,
+        },
+        {
+          "date": 29,
+          "hours": 8,
+        },
+        {
+          "date": 30,
+          "hours": 8,
+        },
+      ],
+      "month": 11,
+      "summary": {
+        "days": 21,
+        "hours": 167,
+      },
+      "year": 2023,
+    },
+  ],
+  "summary": {
+    "days": 21,
+    "hours": 167,
+  },
+}
+`;
+
+exports[`Timesheet should  return valid timesheet for 2023-11-21 - 2024-1-22 1`] = `
+{
+  "months": [
+    {
+      "days": [
+        {
+          "date": 21,
+          "hours": 8,
+        },
+        {
+          "date": 22,
+          "hours": 8,
+        },
+        {
+          "date": 23,
+          "hours": 8,
+        },
+        {
+          "date": 24,
+          "hours": 8,
+        },
+        {
+          "date": 25,
+          "hours": 0,
+        },
+        {
+          "date": 26,
+          "hours": 0,
+        },
+        {
+          "date": 27,
+          "hours": 8,
+        },
+        {
+          "date": 28,
+          "hours": 8,
+        },
+        {
+          "date": 29,
+          "hours": 8,
+        },
+        {
+          "date": 30,
+          "hours": 8,
+        },
+      ],
+      "month": 11,
+      "summary": {
+        "days": 8,
+        "hours": 64,
+      },
+      "year": 2023,
+    },
+    {
+      "days": [
+        {
+          "date": 1,
+          "hours": 8,
+        },
+        {
+          "date": 2,
+          "hours": 0,
+        },
+        {
+          "date": 3,
+          "hours": 0,
+        },
+        {
+          "date": 4,
+          "hours": 8,
+        },
+        {
+          "date": 5,
+          "hours": 8,
+        },
+        {
+          "date": 6,
+          "hours": 8,
+        },
+        {
+          "date": 7,
+          "hours": 8,
+        },
+        {
+          "date": 8,
+          "hours": 8,
+        },
+        {
+          "date": 9,
+          "hours": 0,
+        },
+        {
+          "date": 10,
+          "hours": 0,
+        },
+        {
+          "date": 11,
+          "hours": 8,
+        },
+        {
+          "date": 12,
+          "hours": 8,
+        },
+        {
+          "date": 13,
+          "hours": 8,
+        },
+        {
+          "date": 14,
+          "hours": 8,
+        },
+        {
+          "date": 15,
+          "hours": 8,
+        },
+        {
+          "date": 16,
+          "hours": 0,
+        },
+        {
+          "date": 17,
+          "hours": 0,
+        },
+        {
+          "date": 18,
+          "hours": 8,
+        },
+        {
+          "date": 19,
+          "hours": 8,
+        },
+        {
+          "date": 20,
+          "hours": 8,
+        },
+        {
+          "date": 21,
+          "hours": 8,
+        },
+        {
+          "date": 22,
+          "hours": 8,
+        },
+        {
+          "date": 23,
+          "hours": 0,
+        },
+        {
+          "date": 24,
+          "hours": 0,
+        },
+        {
+          "date": 25,
+          "hours": 8,
+        },
+        {
+          "date": 26,
+          "hours": 8,
+        },
+        {
+          "date": 27,
+          "hours": 8,
+        },
+        {
+          "date": 28,
+          "hours": 8,
+        },
+        {
+          "date": 29,
+          "hours": 8,
+        },
+        {
+          "date": 30,
+          "hours": 0,
+        },
+        {
+          "date": 31,
+          "hours": 0,
+        },
+      ],
+      "month": 12,
+      "summary": {
+        "days": 21,
+        "hours": 168,
+      },
+      "year": 2023,
+    },
+    {
+      "days": [
+        {
+          "date": 1,
+          "hours": 0,
+        },
+        {
+          "date": 2,
+          "hours": 0,
+        },
+        {
+          "date": 3,
+          "hours": 0,
+        },
+        {
+          "date": 4,
+          "hours": 0,
+        },
+        {
+          "date": 5,
+          "hours": 0,
+        },
+        {
+          "date": 6,
+          "hours": 0,
+        },
+        {
+          "date": 7,
+          "hours": 0,
+        },
+        {
+          "date": 8,
+          "hours": 0,
+        },
+        {
+          "date": 9,
+          "hours": 8,
+        },
+        {
+          "date": 10,
+          "hours": 8,
+        },
+        {
+          "date": 11,
+          "hours": 8,
+        },
+        {
+          "date": 12,
+          "hours": 8,
+        },
+        {
+          "date": 13,
+          "hours": 0,
+        },
+        {
+          "date": 14,
+          "hours": 0,
+        },
+        {
+          "date": 15,
+          "hours": 8,
+        },
+        {
+          "date": 16,
+          "hours": 8,
+        },
+        {
+          "date": 17,
+          "hours": 8,
+        },
+        {
+          "date": 18,
+          "hours": 8,
+        },
+        {
+          "date": 19,
+          "hours": 8,
+        },
+        {
+          "date": 20,
+          "hours": 0,
+        },
+        {
+          "date": 21,
+          "hours": 0,
+        },
+        {
+          "date": 22,
+          "hours": 8,
+        },
+      ],
+      "month": 1,
+      "summary": {
+        "days": 10,
+        "hours": 80,
+      },
+      "year": 2024,
+    },
+  ],
+  "summary": {
+    "days": 39,
+    "hours": 312,
+  },
+}
+`;
+
+exports[`Timesheet should  return valid timesheet for November 2023 with out of office for 20-24 1`] = `
+{
+  "months": [
+    {
+      "days": [
+        {
+          "date": 1,
+          "hours": 8,
+        },
+        {
+          "date": 2,
+          "hours": 8,
+        },
+        {
+          "date": 3,
+          "hours": 7,
+        },
+        {
+          "date": 4,
+          "hours": 0,
+        },
+        {
+          "date": 5,
+          "hours": 0,
+        },
+        {
+          "date": 6,
+          "hours": 0,
+        },
+        {
+          "date": 7,
+          "hours": 8,
+        },
+        {
+          "date": 8,
+          "hours": 8,
+        },
+        {
+          "date": 9,
+          "hours": 8,
+        },
+        {
+          "date": 10,
+          "hours": 8,
+        },
+        {
+          "date": 11,
+          "hours": 0,
+        },
+        {
+          "date": 12,
+          "hours": 0,
+        },
+        {
+          "date": 13,
+          "hours": 8,
+        },
+        {
+          "date": 14,
+          "hours": 8,
+        },
+        {
+          "date": 15,
+          "hours": 8,
+        },
+        {
+          "date": 16,
+          "hours": 8,
+        },
+        {
+          "date": 17,
+          "hours": 8,
+        },
+        {
+          "date": 18,
+          "hours": 0,
+        },
+        {
+          "date": 19,
+          "hours": 0,
+        },
+        {
+          "date": 20,
+          "hours": 0,
+        },
+        {
+          "date": 21,
+          "hours": 0,
+        },
+        {
+          "date": 22,
+          "hours": 0,
+        },
+        {
+          "date": 23,
+          "hours": 0,
+        },
+        {
+          "date": 24,
+          "hours": 0,
+        },
+        {
+          "date": 25,
+          "hours": 0,
+        },
+        {
+          "date": 26,
+          "hours": 0,
+        },
+        {
+          "date": 27,
+          "hours": 8,
+        },
+        {
+          "date": 28,
+          "hours": 8,
+        },
+        {
+          "date": 29,
+          "hours": 8,
+        },
+        {
+          "date": 30,
+          "hours": 8,
+        },
+      ],
+      "month": 11,
+      "summary": {
+        "days": 16,
+        "hours": 127,
+      },
+      "year": 2023,
+    },
+  ],
+  "summary": {
+    "days": 16,
+    "hours": 127,
+  },
+}
+`;

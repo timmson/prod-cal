@@ -1,12 +1,7 @@
-const Calendar = require("../dist/index.js")
+import {Calendar} from "../src/calendar/calendar"
 
-function countWorkDays(m) {
-	return m.filter(isWork).length
-}
-
-function isWork(d) {
-	return d.indexOf("work") >= 0
-}
+const countWorkDays = m => m.filter(isWork).length
+const isWork = d => d.indexOf("work") >= 0
 
 const calendar = new Calendar("ru")
 
