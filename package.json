@@ -1,6 +1,6 @@
 {
   "name": "prod-cal",
-  "version": "2.0.3",
+  "version": "3.0.1",
   "description": "Production Calendar",
   "main": "./dist/index.js",
   "scripts": {
