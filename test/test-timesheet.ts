@@ -4,6 +4,10 @@ describe("Timesheet should ", () => {
 
 	const timesheetBuilder = new TimesheetBuilder("ru")
 
+	test("TimesheetBuilder gets unknown locale and test should throw error", () => {
+		expect(() => new TimesheetBuilder("ru1")).toThrow()
+	})
+
 	test("return valid timesheet for 2023-11-1 - 2023-11-30", () => {
 		const actual = timesheetBuilder.build(new Date("2023-11-1"), new Date("2023-11-30"), [])
 

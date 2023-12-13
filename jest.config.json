@@ -1,7 +1,7 @@
 {
   "collectCoverage": true,
   "collectCoverageFrom": [
-    "./dist/*"
+    "./src/**/*"
   ],
   "coverageReporters": [
     "lcov"
