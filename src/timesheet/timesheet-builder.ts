@@ -18,7 +18,7 @@ const getWorkDaysByMonthAndYear = (firstDay: number, lastDay: number, month: num
 const getMonth = (firstDay: number, lastDay: number, month: number, year: number, exceptions: Array<TimesheetException>) => {
 	const days = getWorkDaysByMonthAndYear(firstDay, lastDay, month, year)
 	exceptions.forEach((e) => {
-		days[e.date - 1] = {date: e.date, hours: e.hours}
+		days[e.date.getDate() - 1] = {date: e.date.getDate(), hours: e.hours}
 	})
 
 	return {
@@ -48,7 +48,7 @@ export class TimesheetBuilder {
 		}
 	}
 
-	public build (dateFrom: Date, dateTill: Date, exceptions: Array<TimesheetException>): Timesheet {
+	public build(dateFrom: Date, dateTill: Date, exceptions: Array<TimesheetException>): Timesheet {
 		const startMonth = dateFrom.getMonth() + 1 + dateFrom.getFullYear() * 12
 		const endMonth = dateTill.getMonth() + 1 + dateTill.getFullYear() * 12
 		const months = getSequencedArray(startMonth, endMonth - startMonth + 1).map((m) => {
@@ -56,7 +56,7 @@ export class TimesheetBuilder {
 			const month = (m % 12 == 0) ? 12 : m % 12
 			const firstDay = (m === startMonth) ? dateFrom.getDate() : 1
 			const lastDay = (m === endMonth) ? dateTill.getDate() : new Date(year, month, 0).getDate()
-			return getMonth(firstDay, lastDay, month, year, exceptions.filter((e) => (e.year * 12 + e.month) === m))
+			return getMonth(firstDay, lastDay, month, year, exceptions.filter((e) => (e.date.getFullYear() * 12 + e.date.getMonth() + 1) === m))
 		})
 
 		return {

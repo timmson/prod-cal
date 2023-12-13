@@ -1,4 +1,4 @@
-import {TimesheetBuilder} from "../src/timesheet/timesheet-builder"
+import {TimesheetBuilder} from "../src"
 
 describe("Timesheet should ", () => {
 
@@ -35,11 +35,11 @@ describe("Timesheet should ", () => {
 
 	test("return valid timesheet for November 2023 with out of office for 20-24", () => {
 		const actual = timesheetBuilder.build(new Date("2023-11-1"), new Date("2023-11-30"), [
-			{date: 20, month: 11, year: 2023, hours: 0},
-			{date: 21, month: 11, year: 2023, hours: 0},
-			{date: 22, month: 11, year: 2023, hours: 0},
-			{date: 23, month: 11, year: 2023, hours: 0},
-			{date: 24, month: 11, year: 2023, hours: 0}
+			{date: new Date(2023, 11-1, 20), hours: 0},
+			{date: new Date(2023, 11-1, 21), hours: 0},
+			{date: new Date(2023, 11-1, 22), hours: 0},
+			{date: new Date(2023, 11-1, 23), hours: 0},
+			{date: new Date(2023, 11-1, 24), hours: 0}
 		])
 
 		expect(actual).toMatchSnapshot()
