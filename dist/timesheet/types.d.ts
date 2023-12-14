@@ -1,7 +1,5 @@
 export interface TimesheetException {
-    date: number;
-    month: number;
-    year: number;
+    date: Date;
     hours: number;
 }
 export interface TimesheetSummary {

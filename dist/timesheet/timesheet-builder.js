@@ -18,7 +18,7 @@ const getWorkDaysByMonthAndYear = (firstDay, lastDay, month, year) => (0, sequen
 const getMonth = (firstDay, lastDay, month, year, exceptions) => {
     const days = getWorkDaysByMonthAndYear(firstDay, lastDay, month, year);
     exceptions.forEach((e) => {
-        days[e.date - 1] = { date: e.date, hours: e.hours };
+        days[e.date.getDate() - 1] = { date: e.date.getDate(), hours: e.hours };
     });
     return {
         days: days,
@@ -44,7 +44,7 @@ class TimesheetBuilder {
             const month = (m % 12 == 0) ? 12 : m % 12;
             const firstDay = (m === startMonth) ? dateFrom.getDate() : 1;
             const lastDay = (m === endMonth) ? dateTill.getDate() : new Date(year, month, 0).getDate();
-            return getMonth(firstDay, lastDay, month, year, exceptions.filter((e) => (e.year * 12 + e.month) === m));
+            return getMonth(firstDay, lastDay, month, year, exceptions.filter((e) => (e.date.getFullYear() * 12 + e.date.getMonth() + 1) === m));
         });
         return {
             months: months,
