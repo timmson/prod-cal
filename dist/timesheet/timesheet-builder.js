@@ -3,28 +3,32 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TimesheetBuilder = void 0;
 const calendar_ru_1 = require("../calendar.ru");
 const sequence_1 = require("../sequence");
-const getWorkDaysByMonthAndYear = (firstDay, lastDay, month, year) => (0, sequence_1.getSequencedArray)(firstDay, lastDay - firstDay + 1).map((d) => {
-    const m = calendar_ru_1.default[year.toString()][month - 1];
-    if (m.includes(d.toString())) {
-        return { date: d, hours: 0 };
-    }
-    if (m.includes(d.toString() + "*")) {
-        return { date: d, hours: 7 };
-    }
-    else {
-        return { date: d, hours: 8 };
-    }
-});
+const getWorkDaysByMonthAndYear = (firstDay, lastDay, month, year) => {
+    const sequence = (0, sequence_1.getSequencedArray)(firstDay, lastDay - firstDay + 1).map((d) => {
+        const m = calendar_ru_1.default[year.toString()][month - 1];
+        if (m.includes(d.toString())) {
+            return { date: d, hours: 0 };
+        }
+        if (m.includes(d.toString() + "*")) {
+            return { date: d, hours: 7 };
+        }
+        else {
+            return { date: d, hours: 8 };
+        }
+    });
+    return Object.fromEntries(sequence.map(it => [it.date.toString(), it]));
+};
 const getMonth = (firstDay, lastDay, month, year, exceptions) => {
     const days = getWorkDaysByMonthAndYear(firstDay, lastDay, month, year);
     exceptions.forEach((e) => {
-        days[e.date.getDate() - 1] = { date: e.date.getDate(), hours: e.hours };
+        days[e.date.getDate()] = { date: e.date.getDate(), hours: e.hours };
     });
+    const daysAsArray = Object.values(days);
     return {
-        days: days,
+        days: daysAsArray,
         month: month,
         year: year,
-        summary: getSummaryOfTheMonth(days)
+        summary: getSummaryOfTheMonth(daysAsArray)
     };
 };
 const getSummaryOfTheMonth = (days) => days.reduce((acc, d) => ({ days: acc.days + (d.hours > 0 ? 1 : 0), hours: acc.hours + d.hours }), { days: 0, hours: 0 });

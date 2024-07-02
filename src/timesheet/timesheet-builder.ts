@@ -2,8 +2,8 @@ import cal from "../calendar.ru"
 import {getSequencedArray} from "../sequence"
 import {Timesheet, TimesheetDay, TimesheetException, TimesheetMonth, TimesheetSummary} from "./types"
 
-const getWorkDaysByMonthAndYear = (firstDay: number, lastDay: number, month: number, year: number): Array<TimesheetDay> =>
-	getSequencedArray(firstDay, lastDay - firstDay + 1).map((d) => {
+const getWorkDaysByMonthAndYear = (firstDay: number, lastDay: number, month: number, year: number): { [key: string]: TimesheetDay } => {
+	const sequence = getSequencedArray(firstDay, lastDay - firstDay + 1).map((d) => {
 		const m = cal[year.toString()][month - 1]
 		if (m.includes(d.toString())) {
 			return {date: d, hours: 0}
@@ -15,17 +15,23 @@ const getWorkDaysByMonthAndYear = (firstDay: number, lastDay: number, month: num
 		}
 	})
 
+	return Object.fromEntries(sequence.map(it => [it.date.toString(), it]))
+}
+
 const getMonth = (firstDay: number, lastDay: number, month: number, year: number, exceptions: Array<TimesheetException>) => {
 	const days = getWorkDaysByMonthAndYear(firstDay, lastDay, month, year)
+
 	exceptions.forEach((e) => {
-		days[e.date.getDate() - 1] = {date: e.date.getDate(), hours: e.hours}
+		days[e.date.getDate()] = {date: e.date.getDate(), hours: e.hours}
 	})
 
+	const daysAsArray = Object.values(days)
+
 	return {
-		days: days,
+		days: daysAsArray,
 		month: month,
 		year: year,
-		summary: getSummaryOfTheMonth(days)
+		summary: getSummaryOfTheMonth(daysAsArray)
 	}
 }
 
