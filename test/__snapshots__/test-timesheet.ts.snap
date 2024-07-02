@@ -841,6 +841,281 @@ exports[`Timesheet should  return valid timesheet for 2023-11-21 - 2024-1-22 1`]
 }
 `;
 
+exports[`Timesheet should  return valid timesheet for April and May 2024 with starting work from 2024-05-13 1`] = `
+{
+  "months": [
+    {
+      "days": [
+        {
+          "date": 1,
+          "hours": 0,
+        },
+        {
+          "date": 2,
+          "hours": 0,
+        },
+        {
+          "date": 3,
+          "hours": 0,
+        },
+        {
+          "date": 4,
+          "hours": 0,
+        },
+        {
+          "date": 5,
+          "hours": 0,
+        },
+        {
+          "date": 6,
+          "hours": 0,
+        },
+        {
+          "date": 7,
+          "hours": 0,
+        },
+        {
+          "date": 8,
+          "hours": 0,
+        },
+        {
+          "date": 9,
+          "hours": 0,
+        },
+        {
+          "date": 10,
+          "hours": 0,
+        },
+        {
+          "date": 11,
+          "hours": 0,
+        },
+        {
+          "date": 12,
+          "hours": 0,
+        },
+        {
+          "date": 13,
+          "hours": 0,
+        },
+        {
+          "date": 14,
+          "hours": 0,
+        },
+        {
+          "date": 15,
+          "hours": 0,
+        },
+        {
+          "date": 16,
+          "hours": 0,
+        },
+        {
+          "date": 17,
+          "hours": 0,
+        },
+        {
+          "date": 18,
+          "hours": 0,
+        },
+        {
+          "date": 19,
+          "hours": 0,
+        },
+        {
+          "date": 20,
+          "hours": 0,
+        },
+        {
+          "date": 21,
+          "hours": 0,
+        },
+        {
+          "date": 22,
+          "hours": 0,
+        },
+        {
+          "date": 23,
+          "hours": 0,
+        },
+        {
+          "date": 24,
+          "hours": 0,
+        },
+        {
+          "date": 25,
+          "hours": 0,
+        },
+        {
+          "date": 26,
+          "hours": 0,
+        },
+        {
+          "date": 27,
+          "hours": 0,
+        },
+        {
+          "date": 28,
+          "hours": 0,
+        },
+        {
+          "date": 29,
+          "hours": 0,
+        },
+        {
+          "date": 30,
+          "hours": 0,
+        },
+      ],
+      "month": 4,
+      "summary": {
+        "days": 0,
+        "hours": 0,
+      },
+      "year": 2024,
+    },
+    {
+      "days": [
+        {
+          "date": 1,
+          "hours": 0,
+        },
+        {
+          "date": 2,
+          "hours": 0,
+        },
+        {
+          "date": 3,
+          "hours": 0,
+        },
+        {
+          "date": 4,
+          "hours": 0,
+        },
+        {
+          "date": 5,
+          "hours": 0,
+        },
+        {
+          "date": 6,
+          "hours": 0,
+        },
+        {
+          "date": 7,
+          "hours": 0,
+        },
+        {
+          "date": 8,
+          "hours": 0,
+        },
+        {
+          "date": 9,
+          "hours": 0,
+        },
+        {
+          "date": 10,
+          "hours": 0,
+        },
+        {
+          "date": 11,
+          "hours": 0,
+        },
+        {
+          "date": 12,
+          "hours": 0,
+        },
+        {
+          "date": 13,
+          "hours": 8,
+        },
+        {
+          "date": 14,
+          "hours": 8,
+        },
+        {
+          "date": 15,
+          "hours": 8,
+        },
+        {
+          "date": 16,
+          "hours": 8,
+        },
+        {
+          "date": 17,
+          "hours": 8,
+        },
+        {
+          "date": 18,
+          "hours": 0,
+        },
+        {
+          "date": 19,
+          "hours": 0,
+        },
+        {
+          "date": 20,
+          "hours": 8,
+        },
+        {
+          "date": 21,
+          "hours": 8,
+        },
+        {
+          "date": 22,
+          "hours": 8,
+        },
+        {
+          "date": 23,
+          "hours": 8,
+        },
+        {
+          "date": 24,
+          "hours": 8,
+        },
+        {
+          "date": 25,
+          "hours": 0,
+        },
+        {
+          "date": 26,
+          "hours": 0,
+        },
+        {
+          "date": 27,
+          "hours": 8,
+        },
+        {
+          "date": 28,
+          "hours": 8,
+        },
+        {
+          "date": 29,
+          "hours": 8,
+        },
+        {
+          "date": 30,
+          "hours": 8,
+        },
+        {
+          "date": 31,
+          "hours": 8,
+        },
+      ],
+      "month": 5,
+      "summary": {
+        "days": 15,
+        "hours": 120,
+      },
+      "year": 2024,
+    },
+  ],
+  "summary": {
+    "days": 15,
+    "hours": 120,
+  },
+}
+`;
+
 exports[`Timesheet should  return valid timesheet for November 2023 with out of office for 20-24 1`] = `
 {
   "months": [

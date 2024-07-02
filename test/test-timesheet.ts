@@ -39,15 +39,54 @@ describe("Timesheet should ", () => {
 
 	test("return valid timesheet for November 2023 with out of office for 20-24", () => {
 		const actual = timesheetBuilder.build(new Date("2023-11-1"), new Date("2023-11-30"), [
-			{date: new Date(2023, 11-1, 20), hours: 0},
-			{date: new Date(2023, 11-1, 21), hours: 0},
-			{date: new Date(2023, 11-1, 22), hours: 0},
-			{date: new Date(2023, 11-1, 23), hours: 0},
-			{date: new Date(2023, 11-1, 24), hours: 0}
+			{date: new Date(2023, 11 - 1, 20), hours: 0},
+			{date: new Date(2023, 11 - 1, 21), hours: 0},
+			{date: new Date(2023, 11 - 1, 22), hours: 0},
+			{date: new Date(2023, 11 - 1, 23), hours: 0},
+			{date: new Date(2023, 11 - 1, 24), hours: 0}
 		])
 
 		expect(actual).toMatchSnapshot()
 		expect(actual.summary).toEqual({days: 16, hours: 127})
 	})
+
+	test("return valid timesheet for April and May 2024 with starting work from 2024-05-13", () => {
+		const actual = timesheetBuilder.build(new Date("2024-04-01"), new Date("2024-05-31"), [
+			{date: new Date("2024-04-01"), hours: 0},
+			{date: new Date("2024-04-02"), hours: 0},
+			{date: new Date("2024-04-03"), hours: 0},
+			{date: new Date("2024-04-04"), hours: 0},
+			{date: new Date("2024-04-05"), hours: 0},
+
+			{date: new Date("2024-04-08"), hours: 0},
+			{date: new Date("2024-04-09"), hours: 0},
+			{date: new Date("2024-04-10"), hours: 0},
+			{date: new Date("2024-04-11"), hours: 0},
+			{date: new Date("2024-04-12"), hours: 0},
+
+			{date: new Date("2024-04-15"), hours: 0},
+			{date: new Date("2024-04-16"), hours: 0},
+			{date: new Date("2024-04-17"), hours: 0},
+			{date: new Date("2024-04-18"), hours: 0},
+			{date: new Date("2024-04-19"), hours: 0},
+
+			{date: new Date("2024-04-22"), hours: 0},
+			{date: new Date("2024-04-23"), hours: 0},
+			{date: new Date("2024-04-24"), hours: 0},
+			{date: new Date("2024-04-25"), hours: 0},
+			{date: new Date("2024-04-26"), hours: 0},
+			{date: new Date("2024-04-27"), hours: 0},
+
+			{date: new Date("2024-05-02"), hours: 0},
+			{date: new Date("2024-05-03"), hours: 0},
+			{date: new Date("2024-05-06"), hours: 0},
+			{date: new Date("2024-05-07"), hours: 0},
+			{date: new Date("2024-05-08"), hours: 0}
+		])
+
+		expect(actual).toMatchSnapshot()
+		expect(actual.summary).toEqual({days: 15, hours: 120})
+	})
+
 
 })
