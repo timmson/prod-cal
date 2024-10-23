@@ -3873,7 +3873,6 @@ const calendarSource: CalendarSourceType = {
 			"16",
 			"22",
 			"23",
-			"24"
 		],
 		[
 			"1",
@@ -3902,9 +3901,11 @@ const calendarSource: CalendarSourceType = {
 		],
 		[
 			"1",
+			"2",
 			"3",
 			"4",
-			"8*",
+			"4",
+			"8",
 			"9",
 			"10",
 			"11",
@@ -3920,6 +3921,7 @@ const calendarSource: CalendarSourceType = {
 			"8",
 			"11*",
 			"12",
+			"13",
 			"14",
 			"15",
 			"21",
@@ -3970,9 +3972,9 @@ const calendarSource: CalendarSourceType = {
 			"26"
 		],
 		[
-			"1",
+			"1*",
 			"2",
-			"3*",
+			"3",
 			"4",
 			"8",
 			"9",
@@ -3992,7 +3994,7 @@ const calendarSource: CalendarSourceType = {
 			"21",
 			"27",
 			"28",
-			"31*"
+			"31"
 		]
 	]
 }
