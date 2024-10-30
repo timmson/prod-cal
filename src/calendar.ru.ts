@@ -3823,7 +3823,7 @@ const calendarSource: CalendarSourceType = {
 			"27"
 		],
 		[
-			"2",
+			"2*",
 			"3",
 			"4",
 			"9",
@@ -3903,7 +3903,6 @@ const calendarSource: CalendarSourceType = {
 			"1",
 			"2",
 			"3",
-			"4",
 			"4",
 			"8",
 			"9",
