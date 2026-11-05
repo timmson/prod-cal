@@ -11,7 +11,7 @@ tsconfig.json
 # Test & Coverage
 coverage/
 test/
-.eslintrc.json
+eslint.config.js
 babel.config.json
 jest.config.json
 
