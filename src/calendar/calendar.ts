@@ -1,4 +1,4 @@
-import cal from "../calendar.ru"
+import cal from "../calendar/calendar-source"
 import {getSequencedArray} from "../sequence"
 
 export class Calendar {

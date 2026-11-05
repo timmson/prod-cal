@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TimesheetBuilder = void 0;
-const calendar_ru_1 = require("../calendar.ru");
+const calendar_source_1 = require("../calendar/calendar-source");
 const sequence_1 = require("../sequence");
 const getWorkDaysByMonthAndYear = (firstDay, lastDay, month, year) => {
     const sequence = (0, sequence_1.getSequencedArray)(firstDay, lastDay - firstDay + 1).map((d) => {
-        const m = calendar_ru_1.default[year.toString()][month - 1];
+        const m = calendar_source_1.default[year.toString()][month - 1];
         if (m.includes(d.toString())) {
             return { date: d, hours: 0 };
         }

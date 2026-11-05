@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Calendar = void 0;
-const calendar_ru_1 = require("../calendar.ru");
+const calendar_source_1 = require("../calendar/calendar-source");
 const sequence_1 = require("../sequence");
 class Calendar {
     constructor(locale) {
@@ -17,8 +17,8 @@ class Calendar {
             throw new Error("Year, Month and Day must be not null");
         }
         let dayType = Calendar.DAY_WORK;
-        if (calendar_ru_1.default[year.toString()] !== undefined && calendar_ru_1.default[year.toString()][month - 1] !== undefined) {
-            const monthArray = calendar_ru_1.default[year.toString()][month - 1];
+        if (calendar_source_1.default[year.toString()] !== undefined && calendar_source_1.default[year.toString()][month - 1] !== undefined) {
+            const monthArray = calendar_source_1.default[year.toString()][month - 1];
             dayType = monthArray.includes(day.toString()) ? Calendar.DAY_HOLIDAY : dayType;
             dayType = monthArray.includes(day + "*") ? Calendar.DAY_WORK_REDUCED : dayType;
         }
